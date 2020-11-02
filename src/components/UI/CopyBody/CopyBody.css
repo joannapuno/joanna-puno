@@ -1,0 +1,11 @@
+.CopyBody {
+    color: #A5A6A5;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+@media (min-width: 700px) {
+    .CopyBody {
+        font-size: 20px;
+    }
+  }

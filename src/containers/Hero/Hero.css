@@ -1,0 +1,102 @@
+.Hero {
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-rows: 35% 1fr;
+}
+
+.Hero .HeroPolygon {
+    grid-row-start: 2;
+}
+
+.HeroPolygon .Polygon {
+    background-color: #F8C238;
+    height: 100%;
+    width: 100%;
+}
+
+.Hero .HeroImage {
+    background-color:#1e1e1e;
+}
+
+.HeroText {
+    line-height: 4em;
+    position: absolute;
+    z-index: 1;
+
+    left: 25%;
+    bottom: 50%; 
+}
+
+.MainHeroText {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.MainHeroText .Joanna {
+    color:#F8C238;
+}
+
+.MainHeroText .Puno {
+    color: #1e1e1e;
+}
+
+.HeroSubText {
+    color: #FFFF;
+    font-size: 30px;
+    font-weight: 400;
+    width: 50%;
+    line-height: 1em;
+}
+
+/* Tablets, mobile (landscape) */
+
+@media (min-width: 481px) {
+
+    .Hero .HeroPolygon .Polygon {
+        clip-path: polygon(0 0, 58% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        top: -50px;
+        width: 75%;
+    }
+
+    .HeroText .MainHeroText {
+        display: flex;
+    }
+
+    .MainHeroText .Joanna,
+    .MainHeroText .Puno  {
+        color:#1e1e1e;
+        margin-right: 10px;
+    }
+}
+
+
+
+/* For Hero Text position in all screens*/
+/* @media (min-width: 1280px) {
+    .HeroText {
+        left: 35%;
+    }
+}
+
+@media (min-width: 742px) and (max-width: 1280px) {
+    .HeroText {
+        left: 35%;
+    }
+}
+@media (min-width: 637px) and (max-width: 742px) {
+    .HeroText {
+        left: 30%;
+    }
+}
+@media (min-width: 547px) and (max-width: 637px) {
+    .HeroText {
+        left: 25%;
+    }
+}
+@media (min-width: 481px) and (max-width: 547px) {
+    .HeroText {
+        left: 20%;
+    }
+} */

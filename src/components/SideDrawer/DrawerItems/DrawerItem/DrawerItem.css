@@ -1,0 +1,10 @@
+.DrawerItem {
+    display: block;
+}
+
+.DrawerItem a {
+    text-decoration: none;
+    color: #FFFF;
+    font-weight: 200;
+    font-size: 1.3em;
+}

@@ -10,7 +10,6 @@ const aboutWork = (props) => (
         <div className={classes.AssetsContainer}>
             <CoreAssetsGraphic className={classes.AssetsGraphic} />
         </div>
-
         <div className={classes.AboutWorkText}>
             <CopyTitle>code + design</CopyTitle>
             <CopyBody> My core assets as a developer + designer. There are more to learn, but these are the ones I focus on when it comes to improving my skillsets.

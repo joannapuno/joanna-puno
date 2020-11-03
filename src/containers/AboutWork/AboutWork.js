@@ -29,7 +29,7 @@ const aboutWork = (props) => {
             {/* Link */}
             <NavArrow
                 anchorPage='#work-code'
-                label='personal work'
+                label='personal work' 
                 style={arrowStyle} />
 
         </Element>

@@ -9,7 +9,7 @@ import NavArrow from '../../components/UI/NavArrow/NavArrow';
 
 const about = (props) => {
     const arrowStyle = {
-        'bottom': '0'
+        'bottom': '-55px'
     };
 
     return (

@@ -1,24 +1,43 @@
 .NavArrow {
     display: flex;
     align-items: baseline;
-    padding-right: 20px;
+    margin-right: 40px;
     position: absolute;
     right: 0;
-    cursor: pointer;;
+    cursor: pointer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .NavName {
     color:#FFFF;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 100;
 }
 
 .NavArrowIcon {
-    height: 20px;
+    height: 30px;
     margin: 0 5px;
+}
+
+.NavArrowIcon.Up {
+    transform: rotate(180deg);
 }
 
 .NavArrowIcon svg {
     height: 100%;
     fill: #FFFF;
+}
+
+
+/* Animation */
+.Bounce {
+    animation-name: Bounce;
+    animation-timing-function: ease;
+}
+@keyframes Bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
 }

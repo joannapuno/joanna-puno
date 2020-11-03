@@ -1,6 +1,7 @@
 .Work {
     background-color: #272727;
     padding: 30px 0;
+    position: relative;
 }
 
 .WorkContainer .WorkHeader {

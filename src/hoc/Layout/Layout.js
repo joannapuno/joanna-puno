@@ -8,23 +8,35 @@ import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
     state = {
-        showSideDrawer: false
+        showSideDrawer: false,
+        scrolledDown: false
     };
+
+    //Adding Scrolled Style class to TopNav if scrolled down
+    componentDidMount(){
+        window.addEventListener('scroll', (evt) => {
+            if(window.scrollY > 100){
+                this.setState({ scrolledDown: true })
+            } else {
+                this.setState({ scrolledDown: false })
+            }
+        });
+    }
+
     sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false})
+        this.setState({ showSideDrawer: false })
     };
     sideDrawerToggleHandler = () => {
         this.setState((prevState) => {
             return { showSideDrawer: !prevState.showSideDrawer }
         });
     };
-    
 
     render() {
         return (
             <Aux>
-                <TopNav drawerToggleClicked={this.sideDrawerToggleHandler}/>
-                <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}/>
+                <TopNav ScrolledClass={ this.state.scrolledDown } drawerToggleClicked={this.sideDrawerToggleHandler} />
+                <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>

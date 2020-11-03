@@ -5,12 +5,15 @@ import Aux from '../../hoc/Aux/Aux';
 
 import DrawerItems from './DrawerItems/DrawerItems';
 
+
+
 const sideDrawer = (props) => {
     let attachedClasses = [classes.SideDrawer, classes.Close];
 
     if(props.open){
         attachedClasses = [classes.SideDrawer, classes.Open]
     }
+    
     
     return (
         <Aux>

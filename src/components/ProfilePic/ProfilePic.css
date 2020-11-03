@@ -8,30 +8,35 @@
 .ImageBG {
     background-color: #F8C238;
     position: absolute;
-    right: 109px;
-    top: 18px;
     z-index: -1;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+.ImageBG.AboutImage {
+    right: 95px;
+    top: 18px;
+}
+
+.ImageBG.ContactImage {
+    right: 165px;
+    top: 18px;
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+    .ImageBG.AboutImage {
+        right: -10px;
+    }
     
-  
+    .ImageBG.ContactImage {
+        right: 52px;
+    }
 }
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-  
-  
-}
-@media (min-width: 700px) {
-  
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
- 
-  
-}
-@media (min-width: 1281px) {
-  
+
+@media (min-width: 1201px) {
+    .ImageBG.AboutImage {
+        right: 90px;
+    }
     
-    
+    .ImageBG.ContactImage {
+        right: 152px;
+    }
 }

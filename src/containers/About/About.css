@@ -1,6 +1,7 @@
 .About {
     margin: 20px 0;
     padding: 0 20px;
+    position: relative;
 }
 
 .AboutText {
@@ -24,14 +25,4 @@
       grid-area: 1 / 1;
   }
   
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  
- 
-  
-}
-@media (min-width: 1281px) {
-  
-    
-    
 }

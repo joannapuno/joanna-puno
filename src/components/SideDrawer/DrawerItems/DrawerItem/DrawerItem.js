@@ -1,14 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import classes from './DrawerItem.css';
+import { Link } from 'react-scroll';
 
-const drawerItem = (props) => (
-    <li className={classes.DrawerItem}>
-        <NavLink to={props.link} exact={props.exact} activeClassName={classes.active} >
-            {props.children}
-        </NavLink>
-    </li>
-);
+
+const drawerItem = (props) => {
+    return (
+        <li className={classes.DrawerItem}>
+            <Link
+                to={props.link}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={classes.Link} >
+                {props.children}
+
+            </Link>
+        </li>
+    );
+};
 
 
 export default drawerItem;

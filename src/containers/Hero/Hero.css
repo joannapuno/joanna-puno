@@ -66,8 +66,12 @@
 
     .MainHeroText .Joanna,
     .MainHeroText .Puno  {
-        color:#1e1e1e;
+        color:#FFFF;
         margin-right: 10px;
+    }
+
+    .HeroSubText {
+        color: #1e1e1e;
     }
 }
 

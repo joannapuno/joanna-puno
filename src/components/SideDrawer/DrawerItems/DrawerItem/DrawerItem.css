@@ -2,9 +2,15 @@
     display: block;
 }
 
-.DrawerItem a {
+.DrawerItem .Link {
     text-decoration: none;
     color: #FFFF;
     font-weight: 200;
     font-size: 1.3em;
+    cursor: pointer;
+}
+
+.DrawerItem:hover .Link,
+.DrawerItem:hover .Link.active{
+    color: #F8C238;
 }

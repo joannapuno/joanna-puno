@@ -12,6 +12,8 @@
 
 .ThumbTitle {
     color: #f8c237;
+    padding:10px;
+    text-align: center;
     font-size: 1.2em;
     display: flex;
     position: absolute;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import './App.scss';
 import Layout from './hoc/Layout/Layout';
 import Hero from './containers/Hero/Hero';
 import About from './containers/About/About';

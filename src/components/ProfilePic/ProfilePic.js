@@ -1,9 +1,11 @@
 import React from 'react';
-import imageSrc from '../../assets/images/profile.jpeg';
+import aboutImgSrc from '../../assets/images/profile.jpeg';
+import contactImgSrc from '../../assets/images/contact-profile.jpeg';
 import classes from './ProfilePic.css';
 
 const profilePic = (props) => {
     const imageBgClasses = [ classes.ImageBG, classes[props.pageClass] ]
+    let imageSrc = props.pageClass == "AboutImage" ? aboutImgSrc : contactImgSrc;
 
     return (
         <div className={classes.ImageContainer}>

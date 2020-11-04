@@ -16,10 +16,11 @@ const work = (props) => {
             </div>
 
             <div className={classes.WorkGrid}>
-                <WorkThumbnail Link={'https://joannapuno.github.io/fancy-todo/'} Class={classes.WorkThumb1} Src={'vue-todo'} ThumbTitle={'vue.js to-do'} />
-                <WorkThumbnail Link={'https://joannapuno.github.io/QuoteMachine/'} Class={classes.WorkThumb2} Src={'quote-machine'} ThumbTitle={'quote slider'} />
-                <WorkThumbnail Link={'https://joannapuno.github.io/joke-machine/'} Class={classes.WorkThumb3} Src={'joke-machine'} ThumbTitle={'i have a joke...'} />
-                <WorkThumbnail Link={'https://joannapuno.github.io/Paperclip-stationery/'} Class={classes.WorkThumb4} Src={'paperclip-stationery'} ThumbTitle={'stationery web design'} />
+                <WorkThumbnail Link={'https://burger-builder-six.vercel.app/'} Class={classes.WorkThumb1} Src={'burger-builder'} ThumbTitle={'wip - burger builder'} />
+                <WorkThumbnail Link={'https://joannapuno.github.io/fancy-todo/'} Class={classes.WorkThumb2} Src={'vue-todo'} ThumbTitle={'vue.js to-do'} />
+                <WorkThumbnail Link={'https://joannapuno.github.io/Paperclip-stationery/'} Class={classes.WorkThumb3} Src={'paperclip-stationery'} ThumbTitle={'stationery web design'} />
+                <WorkThumbnail Link={'https://joannapuno.github.io/joke-machine/'} Class={classes.WorkThumb4} Src={'joke-machine'} ThumbTitle={'i have a joke...'} />
+                <WorkThumbnail Link={'https://joannapuno.github.io/QuoteMachine/'} Class={classes.WorkThumb5} Src={'quote-machine'} ThumbTitle={'quote slider'} />
             </div>
         </Element>
 

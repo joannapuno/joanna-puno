@@ -2,6 +2,7 @@
     margin: 70px 0;
     padding: 0 65px;
     position: relative;
+    overflow: hidden;
 }
 
 .AboutWorkText {

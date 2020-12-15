@@ -21,7 +21,7 @@ const about = (props) => {
             <div className={classes.AboutText}>
                 <div>
                     <CopyTitle>who I am</CopyTitle>
-                    <CopyBody>I am a Front-End developer with a Graphic Design background at <strong>Krux Analytics.</strong>
+                    <CopyBody>I am a UX Engineer. Basically a Front-End developer with an eye for design.
                         <br />
                         <br />
                 My passion for adding interactivity and functionality to my designs drove me to development. As a developer with an eye for design, I always have the users and their needs in mind, making the user experience better.

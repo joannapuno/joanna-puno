@@ -1,8 +1,7 @@
 <script setup lang="ts">
-//  import Portfolio from '@/views/Portfolio.vue'
-</script>
+  import Professional from '@/views/Professional.vue'
+</script> 
 
 <template>
-  <!-- <Portfolio /> -->
-  hello
+  <Professional />
 </template>

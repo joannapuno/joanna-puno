@@ -1,0 +1,22 @@
+.jds-icon {
+    font-size: 1rem;
+    svg {
+       height: 1.5rem;
+       width: 1.5rem;
+    }
+
+    &--chevron-down svg {
+        color: $primary;
+        fill: $primary;
+    }
+
+    &--accent-line svg {
+        width: 3rem;
+        path {
+            fill: none;
+            stroke: $primary;
+            stroke-miterlimit: 10;
+            stroke-width: 0.15rem;
+        }
+    }
+}

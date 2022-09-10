@@ -1,0 +1,151 @@
+// Display
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Grid
+.d-grid {
+    display: grid;
+}
+
+// Margins
+.m-x-auto {
+    margin: 0 auto;
+}
+.m-y-auto {
+    margin: auto 0;
+}
+
+.bg-white {
+    background-color: #FFFF;
+    border-color: #FFFF;
+}
+
+.text-white {
+    color: #FFFF;
+}
+
+.bg-primary {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.bg-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+}
+
+.text-secondary {
+    color: $secondary;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+// Sizes
+$sizes: (
+    0, 
+    2, 
+    4, 
+    8, 
+    12, 
+    16, 
+    20, 
+    24, 
+    28, 
+    32, 
+    36, 
+    40, 
+    44, 
+    48, 
+    52, 
+    56, 
+    60,
+    64,
+    68
+);
+
+
+//Spacings
+@each $size in $sizes {
+    $newSize: toRem($size);
+
+    // gaps
+    .gap-#{$size} {
+        gap: $newSize;
+    }
+
+    // paddings
+    .p-#{$size} {
+        padding: $newSize;
+    }
+    .pt-#{$size} {
+        padding-top: $newSize;
+    }
+    .pb-#{$size} {
+        padding-bottom: $newSize;
+    }
+    .pl-#{$size} {
+        padding-left: $newSize;
+    }
+    .pr-#{$size} {
+        padding-right: $newSize;
+    }
+    .px-#{$size} {
+        padding-right: $newSize;
+        padding-left: $newSize;
+    }
+    .py-#{$size} {
+        padding-top: $newSize;
+        padding-bottom: $newSize;
+    }
+
+    // margins
+    .m-#{$size} {
+        margin: $newSize;
+    }
+    .mt-#{$size} {
+        margin-top: $newSize;
+    }
+    .mb-#{$size} {
+        margin-bottom: $newSize;
+    }
+    .ml-#{$size} {
+        margin-left: $newSize;
+    }
+    .mr-#{$size} {
+        margin-right: $newSize;
+    }
+    .mx-#{$size} {
+        margin-right: $newSize;
+        margin-left: $newSize;
+    }
+    .my-#{$size} {
+        margin-top: $newSize;
+        margin-bottom: $newSize;
+    }
+}

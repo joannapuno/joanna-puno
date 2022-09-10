@@ -1,0 +1,78 @@
+/*****************
+*
+* GENERAL SECTIONS
+*
+******************/
+
+section {
+    .section-content {
+        text-align: center;
+        margin: 0 auto;
+        min-width: 20rem;
+        max-width: 30rem;
+        height: 100%;
+    
+        // Section Title
+        .section-title {
+            &--primary {
+                color: $primary;
+            }
+            &--white {
+                color: $white;
+            }
+        }
+        // Section copy
+        .section-copy {
+            font-size: 1rem;
+            line-height: 150%;
+        }
+    }
+    
+    // Section Variants
+    .section--peach {
+        background-color: $primary;
+        height: 100vh;
+        width: 0;
+    }
+    .section--confetti {
+        background-color: #FFFF;
+    }
+}
+
+
+
+/***************************
+*
+* SECTION :: LANDING
+*
+****************************/
+
+.section-landing {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    
+    .section--peach {
+        width: 100%;
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    
+    .section--confetti {
+        grid-area: 1 / 6 / 2 / 13;
+    }
+    
+    .section-content {
+        .section-copy {
+            p {
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 150%;
+            }
+            .subtext {
+                color: $primary;
+                font-size: 1rem;
+            }
+        }
+    }
+}

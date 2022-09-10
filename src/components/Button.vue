@@ -1,24 +1,3 @@
-<template>
-    <component 
-        :is="isLink ? 'a' : 'button'" 
-        :href="href" 
-        :title="ariaLabel"
-        :class="[
-            'jds-button', 
-            `jds-button--${variant}`, 
-            { 'jds-button-icon': icon }]">
-
-       <Icon 
-            v-if="icon"
-            :aria-label="ariaLabel" 
-            :icon=icon />
-
-        <span>
-            <slot></slot>
-        </span>
-    </component>
-</template>
-
 <script setup lang="ts">
     import { ref } from 'vue'
     import { Icon } from '@/components'
@@ -47,3 +26,24 @@
 
     const isLink = ref(props.variant === 'link')
 </script>
+
+<template>
+    <component 
+        :is="isLink ? 'a' : 'button'" 
+        :href="href" 
+        :title="ariaLabel"
+        :class="[
+            'jds-button', 
+            `jds-button--${variant}`, 
+            { 'jds-button-icon': icon }]">
+
+       <Icon 
+            v-if="icon"
+            :aria-label="ariaLabel" 
+            :icon=icon />
+
+        <span>
+            <slot></slot>
+        </span>
+    </component>
+</template>

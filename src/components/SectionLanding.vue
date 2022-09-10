@@ -1,3 +1,7 @@
+<script setup lang="ts">
+    import { Button, SectionTitle } from '@/components'
+</script>
+
 <template>
     <section class="section-landing">
         <div class="section--peach"></div>
@@ -43,11 +47,5 @@
                     icon="chevron-down" />
             </div>
         </div>
-
     </section>
 </template>
-
-<script setup lang="ts">
-    import { Button, SectionTitle } from '@/components'
-
-</script>

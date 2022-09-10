@@ -1,3 +1,7 @@
+<script setup lang="ts">
+    import { SectionTitle, Button } from '@/components'
+</script>
+
 <template>
     <section class="section-contact">
         <div class="section--confetti vh-100">
@@ -30,7 +34,3 @@
         </div>
     </section>
 </template>
-
-<script setup lang="ts">
-    import { SectionTitle, Button } from '@/components'
-</script>

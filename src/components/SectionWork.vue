@@ -1,3 +1,7 @@
+<script setup lang="ts">
+    import { SectionTitle, Icon, Button} from '@/components'
+</script>
+
 <template>
     <section class="section-work">
         <div class="section--peach">
@@ -59,7 +63,3 @@
         </div>
     </section>
 </template>
-
-<script setup lang="ts">
-    import { SectionTitle, Icon, Button} from '@/components'
-</script>

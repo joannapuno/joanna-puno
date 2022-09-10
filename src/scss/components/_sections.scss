@@ -5,6 +5,9 @@
 ******************/
 
 section {
+    opacity: 0;
+    transition: all 1s ease-in;
+
     .section-content {
         display: flex;
         flex-direction: column;
@@ -15,7 +18,7 @@ section {
         min-width: 20rem;
         max-width: 30rem;
         height: 100%;
-    
+
         // Section Title
         .section-title {
             &--primary {
@@ -50,7 +53,7 @@ section {
     .section--peach {
         background-color: $primary;
         height: 100vh;
-        width: 0;
+        width: 100%;
     }
     .section--confetti {
         background-color: #FFFF;
@@ -62,6 +65,10 @@ section {
         width: 20rem;
         background-color: $primary;
         border-radius: 10px;
+    }
+
+    &.show {
+        opacity: 1;
     }
 }
 
@@ -80,8 +87,8 @@ section {
 
     
     .section--peach {
-        width: 100%;
         grid-area: 1 / 1 / 2 / 6;
+        // transform: translateX(100%);
     }
     
     .section--confetti {
@@ -99,6 +106,12 @@ section {
                 color: $primary;
                 font-size: 1rem;
             }
+        }
+    }
+
+    &.show {
+        .section--peach {
+            // transform: unset;
         }
     }
 }
@@ -120,8 +133,14 @@ section {
     }
     
     .section--peach {
-        width: 100%;
         grid-area: 1 / 6 / 2 / 13;
+        // transform: translateX(100%);
+    }
+
+    &.show {
+        .section--peach {
+            // transform: unset;
+        }
     }
 }
 
@@ -137,11 +156,12 @@ section {
     grid-template-rows: 1fr;
 
     .section--peach {
-        width: 100%;
-        grid-area: 1 / 1 / 2 / 5;
+        grid-area: 1 / 1 / 2 / 6;
+        // transform: translateX(100%);
     }
+    
     .section--confetti {
-        grid-area: 1 / 5 / 2 / 13;
+        grid-area: 1 / 6 / 2 / 13;
     }
     .section-content {
         .quack-it-container {
@@ -149,6 +169,12 @@ section {
             width: 30rem;
             background-color: $primary;
             border-radius: 10px;
+        }
+    }
+
+    &.show {
+        .section--peach {
+            // transform: unset;
         }
     }
 }

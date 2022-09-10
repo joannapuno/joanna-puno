@@ -6,6 +6,10 @@
 
 section {
     .section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         margin: 0 auto;
         min-width: 20rem;
@@ -16,15 +20,29 @@ section {
         .section-title {
             &--primary {
                 color: $primary;
+
+                .jds-icon--accent-line svg {
+                    path {
+                        stroke: $primary;
+                    }
+                }
             }
             &--white {
-                color: $white;
+                color: $primary-100;
+
+                .jds-icon--accent-line svg {
+                    path {
+                        stroke: $primary-100;
+                    }
+                }
             }
         }
         // Section copy
         .section-copy {
             font-size: 1rem;
             line-height: 150%;
+            color: $secondary;
+            font-weight: 600;
         }
     }
     
@@ -36,6 +54,14 @@ section {
     }
     .section--confetti {
         background-color: #FFFF;
+    }
+
+    // Main Illustration
+    .site-illustration {
+        height: 20rem;
+        width: 20rem;
+        background-color: $primary;
+        border-radius: 10px;
     }
 }
 
@@ -73,6 +99,56 @@ section {
                 color: $primary;
                 font-size: 1rem;
             }
+        }
+    }
+}
+
+/***************************
+*
+* SECTION :: ABOUT
+*
+****************************/
+
+.section-about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    
+    .section--confetti {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    
+    .section--peach {
+        width: 100%;
+        grid-area: 1 / 6 / 2 / 13;
+    }
+}
+
+/***************************
+*
+* SECTION :: WORK
+*
+****************************/
+
+.section-work {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+
+    .section--peach {
+        width: 100%;
+        grid-area: 1 / 1 / 2 / 5;
+    }
+    .section--confetti {
+        grid-area: 1 / 5 / 2 / 13;
+    }
+    .section-content {
+        .quack-it-container {
+            height: 40rem;
+            width: 30rem;
+            background-color: $primary;
+            border-radius: 10px;
         }
     }
 }

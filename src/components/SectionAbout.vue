@@ -2,44 +2,63 @@
     <section class="section-about">
 
         <div class="section--confetti">
-            <div class="section-content flex-center flex-column">
-
-                <div class="section-title mb-16">
-                    <h1 class="section-title--primary mb-8">My everyday tools</h1>
-                    <span class="jds-icon jds-icon--accent-line">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="41.4" height="9.5" viewBox="0 0 41.4 9.5">
-                        <path d="M40.7 8.1L34 1.4l-6.6 6.7-6.7-6.7L14 8.1 7.4 1.4.7 8.1" class="st0"></path>
-                    </svg>
-                    </span>
-                </div>
+            <div class="section-content">
+                <SectionTitle text="My everyday tools" />
 
                 <div class="section-stack d-flex justify-content-center gap-16">
-                    icons here
+                    <Icon 
+                        aria-label="icon"
+                        icon="github" />
+                    <Icon 
+                        aria-label="icon"
+                        icon="github" />
+                    <Icon 
+                        aria-label="icon"
+                        icon="github" />
+                    <Icon 
+                        aria-label="icon"
+                        icon="github" />
+                    <Icon 
+                        aria-label="icon"
+                        icon="github" />
                 </div>
 
             </div>
         </div>
 
-        <div class="section--peach">
-            <div>
-                <div class="section-title mb-16">
-                    <h1 class="section-title--primary mb-8">More about me</h1>
-                    <span class="jds-icon jds-icon--accent-line">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="41.4" height="9.5" viewBox="0 0 41.4 9.5">
-                        <path d="M40.7 8.1L34 1.4l-6.6 6.7-6.7-6.7L14 8.1 7.4 1.4.7 8.1" class="st0"></path>
-                    </svg>
-                    </span>
+        <div class="section--peach d-flex flex-column">
+            <!-- <article> -->
+                <div class="section-content">
+                    <Icon aria-label="seedling decoration icon" icon="seedling" class="mb-16" />
+                    <SectionTitle text="More about me" variant="white" />
+    
+                    <div class="section-copy px-28 mb-36">
+                        <p class="mb-16">
+                            From designing mockups in Figma to falling in love with coding <span>&#9829;</span>
+                        </p>
+                        <p>
+                            I'm currently a Front-end developer at <a class="text-primary-100" href="https://helcim.com/" title="Helcim website">Helcim~</a>
+                        </p>
+                        <p>
+                            But when I am not working, I love playing online games, drawing, and going for walks!
+                        </p>
+                    </div>
+                    
+                    <div class="flex-center p-36">
+                        <Button
+                            aria-label="Go to hobby page"
+                            href="#"
+                            variant="link"
+                            class="text-primary-100">
+                            Check out my hobby~
+                        </Button>
+                    </div>
                 </div>
-
-                <div class="section-copy mb-36">
-                    <p>From designing mockups in Figma to falling in love with coding (heart here)</p>
-                    <p>I currently work at Helcim! But when I am not working, I love playing online games, drawing, and going for walks!</p>
-                </div>
-
-                <div>
-                    <a href="#">Check out my hobby</a>
-                </div>
-            </div>
+            <!-- </article> -->
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+    import { SectionTitle, Icon, Button } from '@/components'
+</script>

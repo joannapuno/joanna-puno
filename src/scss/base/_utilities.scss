@@ -40,17 +40,29 @@
     border-color: #FFFF;
 }
 
-.text-white {
-    color: #FFFF;
-}
-
 .bg-primary {
     background-color: $primary;
     border-color: $primary;
 }
 
+.text-white {
+    color: #FFFF;
+
+    svg {
+        fill: #FFFF;
+    }
+}
+
 .text-primary {
     color: $primary;
+
+    svg {
+        fill: $primary;
+    }
+}
+
+.text-primary-100 {
+    color: $primary-100;
 }
 
 .bg-secondary {
@@ -60,6 +72,10 @@
 
 .text-secondary {
     color: $secondary;
+
+    svg {
+        fill: $secondary;
+    }
 }
 
 .vh-100 {

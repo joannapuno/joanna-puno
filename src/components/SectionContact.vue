@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="section-contact">
+    <section class="section-contact flex-center">
         <div class="section--confetti vh-100">
             <div class="section-content">
                 <div class="site-illustration mb-32">

@@ -1,6 +1,15 @@
 html {
     font-family: $font-family;
     font-size: 1rem;
+    scrollbar-width: none;
+
+    body {
+        &::-webkit-scrollbar {
+            display: none;
+            -ms-overflow-style: none;
+        }
+        
+    }
 }
 
 * {

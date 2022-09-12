@@ -4,7 +4,8 @@
 
 <template>
     <section class="section-landing">
-        <div class="section--peach"></div>
+        <div class="section--peach">
+        </div>
 
         <div class="section--confetti d-flex flex-column">
 
@@ -40,11 +41,14 @@
             </div>
 
             <!-- Arrow -->
-            <div class="d-flex justify-content-center py-24">
-                <Button
+            <div class="section-links d-flex justify-content-center gap-20 py-24">
+                <a href="#section-about">about me</a>
+                <a href="#section-work">quack it app</a>
+                <a href="#section-contact">find me</a>
+                <!-- <Button
                     aria-label="Scroll down"
                     class="jds-button-icon" 
-                    icon="chevron-down" />
+                    icon="chevron-down" /> -->
             </div>
         </div>
     </section>

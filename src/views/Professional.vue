@@ -17,15 +17,23 @@
 </script>
 
 <template>
-    <!-- landing -->
-   <SectionLanding id="section-landing" />
+    <main class="page">
+            <!-- <div class="container"> -->
+                <!-- landing -->
+               <SectionLanding id="section-landing" />
+            
+                <!-- About -->
+                <SectionAbout id="section-about" />
+            
+                <!-- Quack it app -->
+                <SectionWork id="section-work" />
+            
+            <!-- </div> -->
+        <!-- </div> -->
 
-    <!-- About -->
-    <SectionAbout id="section-about" />
+        <!-- Contact -->
+        <SectionContact id="section-contact" />
+    </main>
 
-    <!-- Quack it app -->
-    <SectionWork id="section-work" />
 
-    <!-- Contact -->
-    <SectionContact id="section-contact" />
 </template>

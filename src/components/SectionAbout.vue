@@ -41,7 +41,7 @@
                             From designing mockups in Figma to falling in love with coding <span>&#9829;</span>
                         </p>
                         <p>
-                            I'm currently a Front-end developer at <a class="text-primary-100" href="https://helcim.com/" title="Helcim website">Helcim~</a>
+                            I'm currently a Front-end developer at <a class="text-white" href="https://helcim.com/" title="Helcim website">Helcim~</a>
                         </p>
                         <p>
                             But when I am not working, I love playing online games, drawing, and going for walks!
@@ -53,7 +53,7 @@
                             aria-label="Go to hobby page"
                             href="#"
                             variant="link"
-                            class="text-primary-100">
+                            class="text-white">
                             Check out my hobby~
                         </Button>
                     </div>

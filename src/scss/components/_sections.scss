@@ -3,11 +3,91 @@
 * GENERAL SECTIONS
 *
 ******************/
+div#app {
+    // Dimensions
+    $dot-size: 2px;
+    $dot-space: 23px;
+    $dot-color: $peach;
+
+    background:
+		linear-gradient(90deg, $white ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($white ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}
+
+main.page {
+    // > *:not(:last-child) {
+    //     margin-bottom: 10rem;
+    // }
+    // > *:not(:first-child) {
+    //     padding-top: 10rem;
+    // }
+}
+
+
+.scrolling-content {
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 1fr;
+
+    .container {
+        // grid-area: 1 / 6 / 2 / 13;
+    }
+}
+
+#moving-bg {
+    position: relative;
+    z-index: -1;
+
+    &.show {
+        // grid-area: 1 / 1 / 2 / 6;
+        overflow-x: hidden;
+        div {
+            background-color: $primary;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        // &.left {
+        //     transform: translateX(0);
+        // }
+        // &.right {
+        //     transform: translateX(50rem);
+        // }
+    }
+    
+}
+
+// .show {
+//     .test {
+
+//         &.left {
+//             // transform: translateX(0);
+//             left: 0;
+//         }
+//         &.right {
+//             // transform: translateX(0);
+//             right: 0;
+//         }
+//     }
+// }
 
 section {
-    opacity: 0;
-    transition: all 1s ease-in;
+    height: 100vh;
 
+    opacity: 0;
+    transition: all .5s ease-in;
+    // grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    
     .section-content {
         display: flex;
         flex-direction: column;
@@ -31,11 +111,11 @@ section {
                 }
             }
             &--white {
-                color: $primary-100;
+                color: $primary;
 
                 .jds-icon--accent-line svg {
                     path {
-                        stroke: $primary-100;
+                        stroke: $primary;
                     }
                 }
             }
@@ -51,27 +131,24 @@ section {
     
     // Section Variants
     .section--peach {
-        background-color: $primary;
-        height: 100vh;
-        width: 100%;
+        background-color: $peach;
+        // height: 100vh;
+        // width: 100%;
+        // transition: all 1s ease-in;
+        grid-area: 1 / 1 / 2 / 6;
     }
     .section--confetti {
-        background-color: #FFFF;
-    }
-
-    // Main Illustration
-    .site-illustration {
-        height: 20rem;
-        width: 20rem;
-        background-color: $primary;
-        border-radius: 10px;
+        // background-color: #FFFF;
+        height: 100%;
+        grid-area: 1 / 6 / 2 / 13;
     }
 
     &.show {
-        opacity: 1;
+        // .section-content {
+            opacity: 1;
+        // }
     }
 }
-
 
 
 /***************************
@@ -81,18 +158,21 @@ section {
 ****************************/
 
 .section-landing {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 1fr;
 
     
     .section--peach {
-        grid-area: 1 / 1 / 2 / 6;
-        // transform: translateX(100%);
+        height: 100vh;
+        width: 100%;
+        transition: all 0.5s ease-in;
+        transform: translateX(-100%);
     }
     
     .section--confetti {
-        grid-area: 1 / 6 / 2 / 13;
+        // grid-area: 1 / 6 / 2 / 13;
     }
     
     .section-content {
@@ -111,7 +191,14 @@ section {
 
     &.show {
         .section--peach {
-            // transform: unset;
+            transform: translateX(0);
+        }
+    }
+
+    .section-links {
+        a {
+            color: $primary;
+            font-weight: 600;
         }
     }
 }
@@ -123,9 +210,9 @@ section {
 ****************************/
 
 .section-about {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 1fr;
 
     
     .section--confetti {
@@ -134,13 +221,16 @@ section {
     
     .section--peach {
         grid-area: 1 / 6 / 2 / 13;
-        // transform: translateX(100%);
+        margin: auto 2rem;
+        padding: 4rem 2rem;
+        border-radius: 10px;
     }
 
     &.show {
-        .section--peach {
-            // transform: unset;
-        }
+        // transform: translateY(-100%);
+        // .section--peach {
+        //     transform: translateX(0);
+        // }
     }
 }
 
@@ -151,30 +241,39 @@ section {
 ****************************/
 
 .section-work {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 1fr;
 
     .section--peach {
         grid-area: 1 / 1 / 2 / 6;
-        // transform: translateX(100%);
+        background-color: transparent;
     }
     
     .section--confetti {
-        grid-area: 1 / 6 / 2 / 13;
+        // grid-area: 1 / 6 / 2 / 13;
     }
     .section-content {
         .quack-it-container {
-            height: 40rem;
+            height: 30rem;
             width: 30rem;
             background-color: $primary;
             border-radius: 10px;
         }
     }
 
-    &.show {
-        .section--peach {
-            // transform: unset;
-        }
-    }
+    // &.show {
+    //     .section--peach {
+    //         transform: translateX(0);
+    //     }
+    // }
+}
+
+
+// Main Illustration
+.site-illustration {
+    height: 20rem;
+    width: 20rem;
+    background-color: $primary;
+    border-radius: 10px;
 }

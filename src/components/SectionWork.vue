@@ -4,7 +4,7 @@
 
 <template>
     <section class="section-work">
-        <div class="section--peach">
+        <div class="section--confetti">
             <div class="section-content">
                 <Icon aria-label="seedling decoration icon" icon="duck" class="mb-16" />
                 <SectionTitle text="My playground" variant="white" />
@@ -30,9 +30,9 @@
                 </div>
             </div>
         </div>
-        <div class="section--confetti">
+        <div class="section--peach">
             <div class="section-content">
-                <SectionTitle text="Quack it" />
+                <!-- <SectionTitle text="Quack it" /> -->
 
                 <div class="quack-it-container">
                     <!-- image here -->

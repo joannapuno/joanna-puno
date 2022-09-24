@@ -7,10 +7,10 @@
         <div class="section--peach">
         </div>
 
-        <div class="section--confetti d-flex flex-column">
+        <div class="d-flex flex-column">
 
             <!-- Content -->
-            <div class="section-content">
+            <article class="section-content">
                 <SectionTitle text="Hello~ I'm Joanna" />
 
                 <div class="section-copy mb-36">
@@ -38,7 +38,7 @@
                         target="_blank" />
                 </div>
 
-            </div>
+            </article>
 
             <!-- Arrow -->
             <div class="section-links d-flex justify-content-center gap-20 py-24">

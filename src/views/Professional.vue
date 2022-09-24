@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import { onMounted } from 'vue'
+    import { usePageChange } from '@/composables/usePageChange'
     import { 
         SectionLanding,
         SectionAbout,
@@ -7,10 +8,8 @@
         SectionContact
     } from '@/components'
 
-    import { usePageChange } from '@/composables/usePageChange'
 
     const { sectionInView } = usePageChange()
-
     onMounted(() => {
         sectionInView()
     })
@@ -18,22 +17,9 @@
 
 <template>
     <main class="page">
-            <!-- <div class="container"> -->
-                <!-- landing -->
-               <SectionLanding id="section-landing" />
-            
-                <!-- About -->
-                <SectionAbout id="section-about" />
-            
-                <!-- Quack it app -->
-                <SectionWork id="section-work" />
-            
-            <!-- </div> -->
-        <!-- </div> -->
-
-        <!-- Contact -->
+        <SectionLanding id="section-landing" />
+        <SectionAbout id="section-about" />
+        <SectionWork id="section-work" />
         <SectionContact id="section-contact" />
     </main>
-
-
 </template>

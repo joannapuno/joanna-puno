@@ -16,16 +16,6 @@ div#app {
 	background-size: $dot-space $dot-space;
 }
 
-main.page {
-    // > *:not(:last-child) {
-    //     margin-bottom: 10rem;
-    // }
-    // > *:not(:first-child) {
-    //     padding-top: 10rem;
-    // }
-}
-
-
 .scrolling-content {
     display: flex;
     justify-content: space-between;
@@ -84,9 +74,19 @@ section {
     opacity: 0;
     transition: all .5s ease-in;
     // grid-template-columns: 1fr 1fr;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 1fr;
+
+    // > :first-child {
+    //     grid-area: 1 / 1 / 1 / 6;
+    // }
+    // > :nth-child(2) {
+    //     grid-area: 1 / 6 / 1 / 13;
+    // }
+
+    display: flex;
+    gap: 1rem;
     
     .section-content {
         display: flex;
@@ -94,10 +94,10 @@ section {
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
-        min-width: 20rem;
-        max-width: 30rem;
-        height: 100%;
+        // margin: 0 auto;
+        // min-width: 20rem;
+        // max-width: 30rem;
+        // height: 100%;
 
         // Section Title
         .section-title {
@@ -135,12 +135,12 @@ section {
         // height: 100vh;
         // width: 100%;
         // transition: all 1s ease-in;
-        grid-area: 1 / 1 / 2 / 6;
+        // grid-area: 1 / 1 / 2 / 6;
     }
     .section--confetti {
         // background-color: #FFFF;
-        height: 100%;
-        grid-area: 1 / 6 / 2 / 13;
+        // height: 100%;
+        // grid-area: 1 / 6 / 2 / 13;
     }
 
     &.show {
@@ -165,7 +165,7 @@ section {
 
     
     .section--peach {
-        height: 100vh;
+        // height: 100vh;
         width: 100%;
         transition: all 0.5s ease-in;
         transform: translateX(-100%);
@@ -176,6 +176,7 @@ section {
     }
     
     .section-content {
+        height: 100%;
         .section-copy {
             p {
                 font-size: 2rem;
@@ -213,16 +214,20 @@ section {
     // display: grid;
     // grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: 1fr;
+    padding: 0 2rem;
+
 
     
     .section--confetti {
-        grid-area: 1 / 1 / 2 / 6;
+        // grid-area: 1 / 1 / 2 / 6;
     }
     
     .section--peach {
-        grid-area: 1 / 6 / 2 / 13;
-        margin: auto 2rem;
-        padding: 4rem 2rem;
+        // grid-area: 1 / 6 / 2 / 13;
+        // margin: auto 2rem;
+        min-height: 30rem;
+        margin: 0 auto;
+        padding: 2rem;
         border-radius: 10px;
     }
 
@@ -244,9 +249,11 @@ section {
     // display: grid;
     // grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: 1fr;
+    padding: 0 2rem;
+
 
     .section--peach {
-        grid-area: 1 / 1 / 2 / 6;
+        // grid-area: 1 / 1 / 2 / 6;
         background-color: transparent;
     }
     

@@ -28,10 +28,10 @@
 }
 
 // Margins
-.m-x-auto {
+.mx-auto {
     margin: 0 auto;
 }
-.m-y-auto {
+.my-auto {
     margin: auto 0;
 }
 
@@ -43,6 +43,10 @@
 .bg-primary {
     background-color: $primary;
     border-color: $primary;
+}
+
+.bg-peach {
+    background-color: $peach;
 }
 
 .text-white {

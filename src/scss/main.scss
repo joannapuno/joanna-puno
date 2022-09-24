@@ -5,7 +5,7 @@
 * BASE
 *
 ******************/
-@import './base/normalize';
+// @import './base/normalize';
 @import './base/variables';
 @import './base/setup';
 @import './base/mixins';
@@ -19,3 +19,10 @@
 @import './components/sections';
 @import './components/buttons';
 @import './components/icons';
+
+/*****************
+*
+* LAYOUT
+*
+******************/
+@import './layout/responsiveness';

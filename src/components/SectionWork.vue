@@ -8,13 +8,13 @@
             <Icon aria-label="seedling decoration icon" icon="duck" class="mb-16" />
             <SectionTitle text="My playground" variant="white" />
 
-            <div class="section-copy px-28 mb-36">
+            <div class="section-copy px-28">
                 <p class="mb-16">
                     A growing social media web app where I can test out JS frameworks, experiment with CSS/SCSS, and just try new things~
                 </p>
             </div>
             
-            <div class="flex-center gap-16 p-36">
+            <div class="flex-center gap-16 p-16">
                 <Button 
                 aria-label="github project link"
                 variant="link"

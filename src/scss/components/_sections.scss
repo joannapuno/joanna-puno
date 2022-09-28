@@ -73,6 +73,8 @@ section {
 
     opacity: 0;
     transition: all .5s ease-in;
+    max-width: 100rem;
+    margin: 0 auto;
     // grid-template-columns: 1fr 1fr;
     // display: grid;
     // grid-template-columns: repeat(12, 1fr);
@@ -86,7 +88,8 @@ section {
     // }
 
     display: flex;
-    gap: 1rem;
+    // justify-content: center;
+    flex-direction: column;
     
     .section-content {
         display: flex;
@@ -101,24 +104,29 @@ section {
 
         // Section Title
         .section-title {
-            &--primary {
-                color: $primary;
-
-                .jds-icon--accent-line svg {
-                    path {
-                        stroke: $primary;
-                    }
+            .jds-icon--accent-line svg {
+                path {
+                    stroke: $primary;
                 }
             }
-            &--white {
-                color: $primary;
+            // &--primary {
+            //     color: $primary;
 
-                .jds-icon--accent-line svg {
-                    path {
-                        stroke: $primary;
-                    }
-                }
-            }
+            //     .jds-icon--accent-line svg {
+            //         path {
+            //             stroke: $primary;
+            //         }
+            //     }
+            // }
+            // &--white {
+            //     color: $primary;
+
+            //     .jds-icon--accent-line svg {
+            //         path {
+            //             stroke: $primary;
+            //         }
+            //     }
+            // }
         }
         // Section copy
         .section-copy {
@@ -163,12 +171,38 @@ section {
     // grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: 1fr;
 
-    
-    .section--peach {
-        // height: 100vh;
-        width: 100%;
-        transition: all 0.5s ease-in;
-        transform: translateX(-100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    // padding: 0 2rem;
+
+    .section-landing--illustration {
+        display: flex;
+        position: relative;
+        // padding: 2rem 0;
+        // max-width: 50rem;
+        .section--peach {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            // margin: auto 0;
+        }
+        .illustration {
+            // transition: all .6s ease-in;
+            // transform: translateY(-100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            // height: 50rem;
+            
+            svg {
+                height: 50rem;
+                
+                width: 100%;
+            }
+        }
     }
     
     .section--confetti {
@@ -186,13 +220,15 @@ section {
             .subtext {
                 color: $primary;
                 font-size: 1rem;
+                font-style: italic;
+                font-weight: 400;
             }
         }
     }
 
     &.show {
-        .section--peach {
-            transform: translateX(0);
+        .illustration {
+            // transform: translateY(0);
         }
     }
 
@@ -226,6 +262,7 @@ section {
         // grid-area: 1 / 6 / 2 / 13;
         // margin: auto 2rem;
         min-height: 30rem;
+        max-height: 30rem;
         margin: 0 auto;
         padding: 2rem;
         border-radius: 10px;

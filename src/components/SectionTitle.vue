@@ -17,8 +17,8 @@
 </script>
 
 <template>
-    <div class="section-title mb-16" :class="`section-title--${variant}`">
-        <h1 class="mb-16`">{{ text }}</h1>
+    <div class="section-title mb-16">
+        <h1 :class="`text-${variant}`">{{ text }}</h1>
         <Icon aria-label="accent decorator line" icon="accent-line" />
     </div>
 </template>

@@ -1,13 +1,16 @@
 <script setup lang="ts">
     import { Button, SectionTitle } from '@/components'
+    import { hanging_items as illustration } from '@/assets/svgs/icon-constants'
 </script>
 
 <template>
     <section class="section-landing">
-        <div class="section--peach">
+        <div class="section-landing--illustration py-32 pl-32">
+            <div class="section--peach"></div>
+            <div class="illustration" v-html="illustration"></div>
         </div>
 
-        <div class="d-flex flex-column">
+        <div class="section-landing--main d-flex flex-column justify-content-center p-32">
 
             <!-- Content -->
             <article class="section-content">
@@ -37,19 +40,18 @@
                         href="#"
                         target="_blank" />
                 </div>
-
             </article>
 
             <!-- Arrow -->
-            <div class="section-links d-flex justify-content-center gap-20 py-24">
+            <!-- <div class="section-links d-flex justify-content-center gap-20 py-24">
                 <a href="#section-about">about me</a>
                 <a href="#section-work">quack it app</a>
                 <a href="#section-contact">find me</a>
-                <!-- <Button
+                <Button
                     aria-label="Scroll down"
                     class="jds-button-icon" 
-                    icon="chevron-down" /> -->
-            </div>
+                    icon="chevron-down" />
+            </div> -->
         </div>
     </section>
 </template>

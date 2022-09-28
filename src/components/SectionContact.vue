@@ -10,20 +10,24 @@
             </div>
             <SectionTitle text="Find me at" />
 
-            <div class="section-stack d-flex justify-content-center gap-16">
+            <div class="section-stack d-flex justify-content-center gap-16 mb-40">
                 <Button
-                    aria-label="icon"
+                    aria-label="Go to my Github profile"
+                    class="jds-button-icon" 
                     icon="github"
+                    variant="link"
                     href="#"
-                    variant="link" />
+                    target="_blank" />
                 <Button 
-                    aria-label="icon"
-                    icon="github"
+                    aria-label="Go to my Linkedin profile"
+                    class="jds-button-icon" 
+                    icon="linkedin"
+                    variant="link"
                     href="#"
-                    variant="link" />
+                    target="_blank" />
             </div>
 
-            <div class="flex-center px-32 py-48">
+            <div class="flex-center">
                 <Button aria-label="Click to go back to top" class="text-primary">
                     back to top
                 </Button>

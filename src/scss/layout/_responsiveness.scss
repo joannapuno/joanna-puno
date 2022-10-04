@@ -27,7 +27,7 @@ div#app {
                         padding: 0;
                         .illustration {
                             svg {
-                                height: calc(100% + 2.5rem);
+                                height: calc(100% + 0.5rem);
                             }
                         }
                     }
@@ -52,13 +52,6 @@ div#app {
         @media screen and (max-width: 390px) {
             section {
                 &.section-landing {
-                    .section-landing--illustration {
-                        .illustration {
-                            svg {
-                                // height: 25rem;
-                            }
-                        }
-                    }
                     .section-content {
                         .section-copy {
                             p {

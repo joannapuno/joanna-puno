@@ -1,5 +1,8 @@
-// Display
-
+/*****************
+*
+* DISPLAYS
+*
+******************/
 .d-flex {
     display: flex;
 }
@@ -27,17 +30,14 @@
     display: grid;
 }
 
-// Margins
-.mx-auto {
-    margin: 0 auto;
-}
-.my-auto {
-    margin: auto 0;
-}
-
+/***********************
+*
+* COLOURS :: BG + TEXT
+*
+************************/
 .bg-white {
-    background-color: #FFFF;
-    border-color: #FFFF;
+    background-color: $white;
+    border-color: $white;
 }
 
 .bg-primary {
@@ -50,10 +50,10 @@
 }
 
 .text-white {
-    color: #FFFF;
+    color: $white;
 
     svg {
-        fill: #FFFF;
+        fill: $white;
     }
 }
 
@@ -63,10 +63,6 @@
     svg {
         fill: $primary;
     }
-}
-
-.text-primary-100 {
-    color: $primary-100;
 }
 
 .bg-secondary {
@@ -82,6 +78,12 @@
     }
 }
 
+/*****************
+*
+* HEIGHTS
+*
+******************/
+
 .vh-100 {
     height: 100vh;
 }
@@ -90,6 +92,20 @@
     height: 100%;
 }
 
+/*****************
+*
+* BORDERS
+*
+******************/
+.border-rounded-10 {
+    border-radius: 10px;
+}
+
+/*****************
+*
+* SPACINGS
+*
+******************/
 // Sizes
 $sizes: (
     0, 
@@ -113,8 +129,12 @@ $sizes: (
     68
 );
 
-
-//Spacings
+.mx-auto {
+    margin: 0 auto;
+}
+.my-auto {
+    margin: auto 0;
+}
 @each $size in $sizes {
     $newSize: toRem($size);
 

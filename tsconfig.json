@@ -23,9 +23,6 @@
       "Dom.iterable", 
       "scripthost"
     ],
-    // "useDefineForClassFields": true,
-    // "resolveJsonModule": true,
-    // "isolatedModules": true,
   },
   "include": [
     "src/**/*.ts", 

@@ -8,8 +8,8 @@
         SectionContact
     } from '@/components'
 
-
     const { sectionInView } = usePageChange()
+    
     onMounted(() => {
         sectionInView()
     })

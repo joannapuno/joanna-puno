@@ -1,12 +1,10 @@
 export const usePageChange = () => {
-
-    const scrollIntoView = function(id: string) {
-        const elToView = document.getElementById(id)
-        elToView?.scrollIntoView({ block: 'center'})
-    }
     
+    // Fading of sections as you scroll
     const sectionInView = function() {
         const elements = document.querySelectorAll('section')
+
+        // if seeing 50% of next section
         const options = { 
             threshold: [0.50] 
         }
@@ -14,7 +12,7 @@ export const usePageChange = () => {
             elements.forEach(element => {
                 const observer = new IntersectionObserver(entries => {
         
-                    if(entries[0].isIntersecting === true) {
+                    if(entries[0].isIntersecting) {
                         element?.classList.add('show') 
                     } else {
                         element?.classList.remove('show')
@@ -25,9 +23,5 @@ export const usePageChange = () => {
             })
         }
     }
-
-    return {
-        scrollIntoView,
-        sectionInView
-    }
+    return { sectionInView }
 }

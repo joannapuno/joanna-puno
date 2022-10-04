@@ -1,7 +1,5 @@
 .jds-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex('row', 'center', 'center');
 
     svg {
        height: 2rem;

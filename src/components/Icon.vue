@@ -14,21 +14,8 @@
                 return [
                     'github',
                     'linkedin',
-                    'chevron-down',
-
-                    'html',
-                    'javascript',
-                    'vue',
-                    'typescript',
-                    'sass',
-                    'figma',
-
                     'seedling',
-                    'duck',
-
-                    'react',
                     'accent-line'
-
                 ].includes(value)
             }
         }
@@ -47,6 +34,5 @@
         :aria-label="ariaLabel"
         :class="['jds-icon', `jds-icon--${icon}`]"
         v-html="iconSVG">
-
     </span>
 </template>

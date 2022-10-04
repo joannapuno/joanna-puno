@@ -21,7 +21,7 @@ div#app {
                     grid-template-rows: repeat(2, 1fr);
 
                     .section-landing--illustration {
-                        .section--peach {
+                        .section-peach {
                             border-radius: 0;
                         }
                         padding: 0;
@@ -34,6 +34,16 @@ div#app {
 
                     .section-landing--main {
                         padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 734px) {
+            section {
+                &.section-about {
+                    .section-peach {
+                        padding: 1rem;
                     }
                 }
             }
@@ -57,11 +67,6 @@ div#app {
                         }
                     }
                 }
-                &.section-about {
-                    .section--peach {
-                        padding: 1rem;
-                    }
-                }
             }
 
             .section-title {
@@ -72,6 +77,18 @@ div#app {
             .section-copy {
                 padding: 0;
                 font-size: 0.95rem;
+            }
+        }
+
+        @media screen and (max-height: 800px) {
+            section {
+                &.section-landing {
+                    .illustration {
+                        svg {
+                            height: 97vh;
+                        }
+                    }
+                }
             }
         }
     }

@@ -3,104 +3,21 @@
 * GENERAL SECTIONS
 *
 ******************/
-div#app {
-    // Dimensions
-    $dot-size: 2px;
-    $dot-space: 23px;
-    $dot-color: $peach;
-
-    background:
-		linear-gradient(90deg, $white ($dot-space - $dot-size), transparent 1%) center,
-		linear-gradient($white ($dot-space - $dot-size), transparent 1%) center,
-		$dot-color;
-	background-size: $dot-space $dot-space;
-}
-
-.scrolling-content {
-    display: flex;
-    justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 1fr;
-
-    .container {
-        // grid-area: 1 / 6 / 2 / 13;
-    }
-}
-
-#moving-bg {
-    position: relative;
-    z-index: -1;
-
-    &.show {
-        // grid-area: 1 / 1 / 2 / 6;
-        overflow-x: hidden;
-        div {
-            background-color: $primary;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        // &.left {
-        //     transform: translateX(0);
-        // }
-        // &.right {
-        //     transform: translateX(50rem);
-        // }
-    }
-    
-}
-
-// .show {
-//     .test {
-
-//         &.left {
-//             // transform: translateX(0);
-//             left: 0;
-//         }
-//         &.right {
-//             // transform: translateX(0);
-//             right: 0;
-//         }
-//     }
-// }
-
 section {
-    height: 100vh;
-
     opacity: 0;
-    transition: all .5s ease-in;
+    height: 100vh;
     max-width: 100rem;
-    margin: 0 auto;
-    // grid-template-columns: 1fr 1fr;
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 1fr;
-
-    // > :first-child {
-    //     grid-area: 1 / 1 / 1 / 6;
-    // }
-    // > :nth-child(2) {
-    //     grid-area: 1 / 6 / 1 / 13;
-    // }
-
     display: flex;
-    // justify-content: center;
     flex-direction: column;
-    
+    margin: 0 auto;
+    transition: all .5s ease-in;
+
     .section-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        // margin: 0 auto;
-        // min-width: 20rem;
-        // max-width: 30rem;
-        // height: 100%;
 
         // Section Title
         .section-title {
@@ -109,52 +26,21 @@ section {
                     stroke: $primary;
                 }
             }
-            // &--primary {
-            //     color: $primary;
-
-            //     .jds-icon--accent-line svg {
-            //         path {
-            //             stroke: $primary;
-            //         }
-            //     }
-            // }
-            // &--white {
-            //     color: $primary;
-
-            //     .jds-icon--accent-line svg {
-            //         path {
-            //             stroke: $primary;
-            //         }
-            //     }
-            // }
         }
         // Section copy
         .section-copy {
             font-size: 1rem;
-            line-height: 150%;
+            line-height: 180%;
             color: $secondary;
             font-weight: 600;
         }
     }
-    
-    // Section Variants
-    .section--peach {
+    .section-peach {
         background-color: $peach;
-        // height: 100vh;
-        // width: 100%;
-        // transition: all 1s ease-in;
-        // grid-area: 1 / 1 / 2 / 6;
-    }
-    .section--confetti {
-        // background-color: #FFFF;
-        // height: 100%;
-        // grid-area: 1 / 6 / 2 / 13;
     }
 
     &.show {
-        // .section-content {
-            opacity: 1;
-        // }
+        opacity: 1;
     }
 }
 
@@ -166,47 +52,32 @@ section {
 ****************************/
 
 .section-landing {
-
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 1fr;
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    // padding: 0 2rem;
 
     .section-landing--illustration {
         display: flex;
         position: relative;
-        // padding: 2rem 0;
-        // max-width: 50rem;
-        .section--peach {
+
+        .section-peach {
             height: 100%;
             width: 100%;
-            border-radius: 10px;
-            // margin: auto 0;
+            @extend .border-rounded-10;
         }
+
         .illustration {
-            // transition: all .6s ease-in;
-            // transform: translateY(-100%);
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 100%;
-            // height: 50rem;
             
             svg {
-                height: 50rem;
-                
+                height: 55rem;
                 width: 100%;
             }
         }
-    }
-    
-    .section--confetti {
-        // grid-area: 1 / 6 / 2 / 13;
     }
     
     .section-content {
@@ -226,12 +97,6 @@ section {
         }
     }
 
-    &.show {
-        .illustration {
-            // transform: translateY(0);
-        }
-    }
-
     .section-links {
         a {
             color: $primary;
@@ -247,77 +112,29 @@ section {
 ****************************/
 
 .section-about {
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 1fr;
     padding: 0 2rem;
 
-
-    
-    .section--confetti {
-        // grid-area: 1 / 1 / 2 / 6;
-    }
-    
-    .section--peach {
-        // grid-area: 1 / 6 / 2 / 13;
-        // margin: auto 2rem;
+    .section-peach {
         min-height: 30rem;
         max-height: 30rem;
-        margin: 0 auto;
-        padding: 2rem;
+        max-width: 48rem;
+        padding: 2rem 5rem;
         border-radius: 10px;
-    }
-
-    &.show {
-        // transform: translateY(-100%);
-        // .section--peach {
-        //     transform: translateX(0);
-        // }
     }
 }
 
 /***************************
 *
-* SECTION :: WORK
+* SECTION :: CONTACT
 *
 ****************************/
-
-.section-work {
-    // display: grid;
-    // grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 1fr;
-    padding: 0 2rem;
-
-
-    .section--peach {
-        // grid-area: 1 / 1 / 2 / 6;
-        background-color: transparent;
-    }
+.section-contact {
+    .illustration {
+        height: 20rem;
+        width: 20rem;
     
-    .section--confetti {
-        // grid-area: 1 / 6 / 2 / 13;
-    }
-    .section-content {
-        .quack-it-container {
-            height: 30rem;
-            width: 30rem;
-            background-color: $primary;
-            border-radius: 10px;
+        img {
+            height: 100%;
         }
     }
-
-    // &.show {
-    //     .section--peach {
-    //         transform: translateX(0);
-    //     }
-    // }
-}
-
-
-// Main Illustration
-.site-illustration {
-    height: 20rem;
-    width: 20rem;
-    background-color: $primary;
-    border-radius: 10px;
 }

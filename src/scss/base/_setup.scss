@@ -15,7 +15,6 @@ html {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 h1,
@@ -44,4 +43,18 @@ button {
 
 a {
     cursor: pointer;
+}
+
+// Dotted BG
+div#app {
+    // Dimensions
+    $dot-size: 2px;
+    $dot-space: 23px;
+    $dot-color: $peach;
+
+    background:
+		linear-gradient(90deg, $white ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($white ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
 }

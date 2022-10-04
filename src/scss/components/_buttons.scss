@@ -14,9 +14,7 @@
         padding: 0.5rem;
     
         .jds-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex('row', 'center', 'center');
         }
     }
 

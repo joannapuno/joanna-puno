@@ -29,8 +29,7 @@
             </div>
         </article>
 
-        <article class="section-content section--peach">
-            <!-- <SectionTitle text="Quack it" /> -->
+        <article class="section-content section-peach">
 
             <div class="quack-it-container">
                 <!-- image here -->

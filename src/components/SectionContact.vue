@@ -1,31 +1,16 @@
 <script setup lang="ts">
-    import { SectionTitle, Button } from '@/components'
+    import { SectionTitle, Button, ContactLinks } from '@/components'
 </script>
 
 <template>
     <section class="section-contact flex-center">
         <article class="section-content">
-            <div class="site-illustration mb-32">
-
+            <div class="illustration mb-32">
+                <img src="@/assets/portrait.png" alt="illustration portrait">
             </div>
             <SectionTitle text="Find me at" />
 
-            <div class="section-stack d-flex justify-content-center gap-16 mb-40">
-                <Button
-                    aria-label="Go to my Github profile"
-                    class="jds-button-icon" 
-                    icon="github"
-                    variant="link"
-                    href="#"
-                    target="_blank" />
-                <Button 
-                    aria-label="Go to my Linkedin profile"
-                    class="jds-button-icon" 
-                    icon="linkedin"
-                    variant="link"
-                    href="#"
-                    target="_blank" />
-            </div>
+            <ContactLinks />
 
             <div class="flex-center">
                 <Button aria-label="Click to go back to top" class="text-primary">

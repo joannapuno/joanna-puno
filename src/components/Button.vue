@@ -24,7 +24,7 @@
         }
     })
 
-    const isLink = ref(props.variant === 'link')
+    const isLink = ref(props.variant === 'link' || props.href)
 </script>
 
 <template>

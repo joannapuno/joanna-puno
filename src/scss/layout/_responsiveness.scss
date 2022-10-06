@@ -1,21 +1,7 @@
 div#app {
     main.page {
-        // max-width: 90rem;
-        // margin: 0 auto;
-
         @media screen and (max-width: 1023px) {
             section {
-                // flex-direction: column;
-                // grid-template-columns: 1fr;
-                // grid-template-rows: repeat(12, 1fr);
-
-                // > :first-child {
-                //     grid-area: 1 / 1 / 6 / 1;
-                // }
-                // > :nth-child(2) {
-                //     grid-area: 6 / 1 / 13 / 1;
-                // }
-
                 &.section-landing {
                     grid-template-columns: 1fr;
                     grid-template-rows: repeat(2, 1fr);

@@ -12,8 +12,11 @@
 
             <ContactLinks />
 
-            <div class="flex-center">
-                <Button aria-label="Click to go back to top" class="text-primary">
+            <div class="flex-center mt-32">
+                <Button 
+                    aria-label="Click to go back to top" 
+                    class="text-primary"
+                    href="#section-landing">
                     back to top
                 </Button>
             </div>

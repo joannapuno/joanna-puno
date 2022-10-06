@@ -1,0 +1,30 @@
+.jds-button {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+
+    span {
+        font-weight: 600;
+    }
+
+    &-icon {
+        border-radius: 50%;
+        padding: 0.5rem;
+    
+        .jds-icon {
+            @include flex('row', 'center', 'center');
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:target {
+        color: $secondary;
+        background-color: $primary-100;
+        border-color: $primary-100;
+        outline: $primary-100;
+    }
+}

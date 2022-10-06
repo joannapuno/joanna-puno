@@ -1,0 +1,195 @@
+/*****************
+*
+* DISPLAYS
+*
+******************/
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Grid
+.d-grid {
+    display: grid;
+}
+
+/***********************
+*
+* COLOURS :: BG + TEXT
+*
+************************/
+.bg-white {
+    background-color: $white;
+    border-color: $white;
+}
+
+.bg-primary {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.bg-peach {
+    background-color: $peach;
+}
+
+.text-white {
+    color: $white;
+
+    svg {
+        fill: $white;
+    }
+}
+
+.text-primary {
+    color: $primary;
+
+    svg {
+        fill: $primary;
+    }
+}
+
+.bg-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+}
+
+.text-secondary {
+    color: $secondary;
+
+    svg {
+        fill: $secondary;
+    }
+}
+
+/*****************
+*
+* HEIGHTS
+*
+******************/
+
+.vh-100 {
+    height: 100vh;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+/*****************
+*
+* BORDERS
+*
+******************/
+.border-rounded-10 {
+    border-radius: 10px;
+}
+
+/*****************
+*
+* SPACINGS
+*
+******************/
+// Sizes
+$sizes: (
+    0, 
+    2, 
+    4, 
+    8, 
+    12, 
+    16, 
+    20, 
+    24, 
+    28, 
+    32, 
+    36, 
+    40, 
+    44, 
+    48, 
+    52, 
+    56, 
+    60,
+    64,
+    68
+);
+
+.mx-auto {
+    margin: 0 auto;
+}
+.my-auto {
+    margin: auto 0;
+}
+@each $size in $sizes {
+    $newSize: toRem($size);
+
+    // gaps
+    .gap-#{$size} {
+        gap: $newSize;
+    }
+
+    // paddings
+    .p-#{$size} {
+        padding: $newSize;
+    }
+    .pt-#{$size} {
+        padding-top: $newSize;
+    }
+    .pb-#{$size} {
+        padding-bottom: $newSize;
+    }
+    .pl-#{$size} {
+        padding-left: $newSize;
+    }
+    .pr-#{$size} {
+        padding-right: $newSize;
+    }
+    .px-#{$size} {
+        padding-right: $newSize;
+        padding-left: $newSize;
+    }
+    .py-#{$size} {
+        padding-top: $newSize;
+        padding-bottom: $newSize;
+    }
+
+    // margins
+    .m-#{$size} {
+        margin: $newSize;
+    }
+    .mt-#{$size} {
+        margin-top: $newSize;
+    }
+    .mb-#{$size} {
+        margin-bottom: $newSize;
+    }
+    .ml-#{$size} {
+        margin-left: $newSize;
+    }
+    .mr-#{$size} {
+        margin-right: $newSize;
+    }
+    .mx-#{$size} {
+        margin-right: $newSize;
+        margin-left: $newSize;
+    }
+    .my-#{$size} {
+        margin-top: $newSize;
+        margin-bottom: $newSize;
+    }
+}

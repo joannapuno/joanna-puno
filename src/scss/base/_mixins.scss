@@ -1,0 +1,16 @@
+@function toRem($value) {
+    $newVal: calc($value / 16);
+    @return $newVal + rem;
+}
+
+@mixin flex($direction: 'row', $justifyContent: '', $alignItems: '') {
+    display: flex;
+    flex-direction: #{$direction};
+    
+    @if($justifyContent) {
+        justify-content: #{$justifyContent};
+    }
+    @if($alignItems) {
+        align-items: #{$alignItems};
+    }
+}

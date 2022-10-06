@@ -1,0 +1,140 @@
+/*****************
+*
+* GENERAL SECTIONS
+*
+******************/
+section {
+    opacity: 0;
+    height: 100vh;
+    max-width: 100rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    transition: all .5s ease-in;
+
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        // Section Title
+        .section-title {
+            .jds-icon--accent-line svg {
+                path {
+                    stroke: $primary;
+                }
+            }
+        }
+        // Section copy
+        .section-copy {
+            font-size: 1rem;
+            line-height: 180%;
+            color: $secondary;
+            font-weight: 600;
+        }
+    }
+    .section-peach {
+        background-color: $peach;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+
+/***************************
+*
+* SECTION :: LANDING
+*
+****************************/
+
+.section-landing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .section-landing--illustration {
+        display: flex;
+        position: relative;
+
+        .section-peach {
+            height: 100%;
+            width: 100%;
+            @extend .border-rounded-10;
+        }
+
+        .illustration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            
+            svg {
+                height: 55rem;
+                width: 100%;
+            }
+        }
+    }
+    
+    .section-content {
+        height: 100%;
+        .section-copy {
+            p {
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 150%;
+            }
+            .subtext {
+                color: $primary;
+                font-size: 1rem;
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .section-links {
+        a {
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+
+/***************************
+*
+* SECTION :: ABOUT
+*
+****************************/
+
+.section-about {
+    padding: 0 2rem;
+
+    .section-peach {
+        min-height: 30rem;
+        max-height: 30rem;
+        max-width: 48rem;
+        padding: 2rem 5rem;
+        border-radius: 10px;
+    }
+}
+
+/***************************
+*
+* SECTION :: CONTACT
+*
+****************************/
+.section-contact {
+    .illustration {
+        height: 20rem;
+        width: 20rem;
+    
+        img {
+            height: 100%;
+        }
+    }
+}

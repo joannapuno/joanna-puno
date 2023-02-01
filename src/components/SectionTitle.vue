@@ -1,7 +1,6 @@
 <script setup lang="ts">
-    import { Icon } from '@/components'
 
-    const props = defineProps({
+    defineProps({
         text: {
             type: String,
             default: ''
@@ -19,6 +18,10 @@
 <template>
     <div class="section-title mb-16">
         <h1 :class="`text-${variant}`">{{ text }}</h1>
-        <Icon aria-label="accent decorator line" icon="accent-line" />
+        <span aria-label="zigzag accent line"
+            class="jds-icon jds-icon--accent-line accent decorator line mx-auto"
+            aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.4 9.5"><path d="M40.7 8.1L34 1.4l-6.6 6.7-6.7-6.7L14 8.1 7.4 1.4.7 8.1" class="st0"></path></svg>
+        </span>
     </div>
 </template>

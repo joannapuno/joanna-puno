@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { SectionTitle, Icon, Button } from '@/components'
+    import { SectionTitle, Icon } from '@/components'
 </script>
 
 <template>
@@ -9,7 +9,7 @@
             <div class="section-peach flex-center flex-column">
                 <Icon 
                     aria-label="seedling decoration icon" 
-                    icon="seedling" 
+                    icon="fa-solid fa-seedling" 
                     class="mb-16" />
                 <SectionTitle text="More about me" variant="white" />
     

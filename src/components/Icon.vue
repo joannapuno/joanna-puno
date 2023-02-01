@@ -1,38 +1,24 @@
 <script setup lang="ts">
-    import { computed } from 'vue'
-    import * as icons from '@/assets/svgs/icon-constants'
-
-    const props = defineProps({
+    defineProps({
         ariaLabel: {
             type: String,
             required: true
         },
         icon: {
             type: String,
-            required: true,
-            validator: (value: string) =>  {
-                return [
-                    'github',
-                    'linkedin',
-                    'seedling',
-                    'accent-line'
-                ].includes(value)
-            }
+            required: true
+        },
+        size: {
+            type: String,
+            required: false,
+            default: 'fa-2x'
         }
     })
-
-    const iconSVG = computed(() => {
-        const cleanName = props.icon.replace('-', '_')
-        const selectedIcon = icons[cleanName]
-        return selectedIcon
-    })
-    
 </script>
 
 <template>
     <span 
         :aria-label="ariaLabel"
-        :class="['jds-icon', `jds-icon--${icon}`]"
-        v-html="iconSVG">
+        :class="['jds-icon', icon, size]">
     </span>
 </template>

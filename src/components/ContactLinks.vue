@@ -7,14 +7,14 @@
         <Button
             aria-label="Go to my Github profile"
             class="jds-button-icon" 
-            icon="github"
+            icon="fa-brands fa-github"
             variant="link"
             href="https://github.com/joannapuno"
             target="_blank" />
         <Button 
             aria-label="Go to my Linkedin profile"
             class="jds-button-icon" 
-            icon="linkedin"
+            icon="fa-brands fa-linkedin-in"
             variant="link"
             href="https://www.linkedin.com/in/joanna-puno-785402137/"
             target="_blank" />

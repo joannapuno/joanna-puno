@@ -19,7 +19,7 @@
     <main class="page">
         <SectionLanding id="section-landing" />
         <SectionAbout id="section-about" />
-        <!-- <SectionWork id="section-work" /> -->
+        <SectionWork id="section-work" />
         <SectionContact id="section-contact" />
     </main>
 </template>

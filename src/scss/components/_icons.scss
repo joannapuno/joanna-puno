@@ -1,13 +1,11 @@
 .jds-icon {
     @include flex('row', 'center', 'center');
+    min-height: 2rem;
+    min-width: 2rem;
+    fill: $secondary;
+    color: $secondary;
 
-    svg {
-       height: 2rem;
-       width: 2rem;
-       fill: $secondary;
-    }
-
-    &--accent-line svg {
+    &--accent-line {
         width: 3rem;
         path {
             fill: none;

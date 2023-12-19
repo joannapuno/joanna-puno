@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import Professional from '@/views/Professional.vue'
+import { Hero } from '@/views'
 </script> 
 
 <template>
-  <Professional />
+  <Hero />
 </template>

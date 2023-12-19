@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+.align-items-end {
+    align-items: flex-end;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -28,54 +32,6 @@
 // Grid
 .d-grid {
     display: grid;
-}
-
-/***********************
-*
-* COLOURS :: BG + TEXT
-*
-************************/
-.bg-white {
-    background-color: $white;
-    border-color: $white;
-}
-
-.bg-primary {
-    background-color: $primary;
-    border-color: $primary;
-}
-
-.bg-peach {
-    background-color: $peach;
-}
-
-.text-white {
-    color: $white;
-
-    svg {
-        fill: $white;
-    }
-}
-
-.text-primary {
-    color: $primary;
-
-    svg {
-        fill: $primary;
-    }
-}
-
-.bg-secondary {
-    background-color: $secondary;
-    border-color: $secondary;
-}
-
-.text-secondary {
-    color: $secondary;
-
-    svg {
-        fill: $secondary;
-    }
 }
 
 /*****************
@@ -108,22 +64,22 @@
 ******************/
 // Sizes
 $sizes: (
-    0, 
-    2, 
-    4, 
-    8, 
-    12, 
-    16, 
-    20, 
-    24, 
-    28, 
-    32, 
-    36, 
-    40, 
-    44, 
-    48, 
-    52, 
-    56, 
+    0,
+    2,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
     60,
     64,
     68
@@ -132,9 +88,11 @@ $sizes: (
 .mx-auto {
     margin: 0 auto;
 }
+
 .my-auto {
     margin: auto 0;
 }
+
 @each $size in $sizes {
     $newSize: toRem($size);
 
@@ -147,22 +105,28 @@ $sizes: (
     .p-#{$size} {
         padding: $newSize;
     }
+
     .pt-#{$size} {
         padding-top: $newSize;
     }
+
     .pb-#{$size} {
         padding-bottom: $newSize;
     }
+
     .pl-#{$size} {
         padding-left: $newSize;
     }
+
     .pr-#{$size} {
         padding-right: $newSize;
     }
+
     .px-#{$size} {
         padding-right: $newSize;
         padding-left: $newSize;
     }
+
     .py-#{$size} {
         padding-top: $newSize;
         padding-bottom: $newSize;
@@ -172,24 +136,56 @@ $sizes: (
     .m-#{$size} {
         margin: $newSize;
     }
+
     .mt-#{$size} {
         margin-top: $newSize;
     }
+
     .mb-#{$size} {
         margin-bottom: $newSize;
     }
+
     .ml-#{$size} {
         margin-left: $newSize;
     }
+
     .mr-#{$size} {
         margin-right: $newSize;
     }
+
     .mx-#{$size} {
         margin-right: $newSize;
         margin-left: $newSize;
     }
+
     .my-#{$size} {
         margin-top: $newSize;
         margin-bottom: $newSize;
     }
+}
+
+/*****************
+*
+* TYPOGRAPHY
+*
+******************/
+.heading,
+.sub-heading {
+    font-family: var(--display-font-family);
+}
+
+.heading {
+    font-size: var(--heading-font-size);
+    line-height: 0.8em;
+    color: var(--primary-color);
+}
+
+.sub-heading {
+    font-size: var(--sub-heading-font-size);
+    line-height: 1em;
+    color: var(--secondary-color)
+}
+
+.text-center {
+    text-align: center;
 }

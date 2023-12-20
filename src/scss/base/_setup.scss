@@ -1,5 +1,5 @@
 :root {
-    --page-background-mode: #{$gray-500};
+    --page-background-mode: #{$black};
     --primary-color: #{$white};
     --secondary-color: #{$gray-200};
 
@@ -18,17 +18,17 @@ body {
 html {
     font-family: var(--body-font-family);
     font-size: 62.95%;
-    // scrollbar-width: none;
+    scrollbar-width: none;
 
     body {
         background-color: var(--page-background-mode);
         color: var(--primary-color);
         font-size: var(--body-font-size);
 
-        // &::-webkit-scrollbar {
-        //     display: none;
-        //     -ms-overflow-style: none;
-        // }
+        &::-webkit-scrollbar {
+            display: none;
+            -ms-overflow-style: none;
+        }
 
     }
 }

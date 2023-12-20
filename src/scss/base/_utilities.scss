@@ -36,7 +36,7 @@
 
 /*****************
 *
-* HEIGHTS
+* HEIGHTS & WIDTHS
 *
 ******************/
 
@@ -48,6 +48,10 @@
     height: 100%;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 /*****************
 *
 * BORDERS
@@ -55,6 +59,39 @@
 ******************/
 .border-rounded-10 {
     border-radius: 10px;
+}
+
+/*****************
+*
+* POSITIONS
+*
+******************/
+.position-relative {
+    position: relative;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
 }
 
 /*****************
@@ -188,4 +225,28 @@ $sizes: (
 
 .text-center {
     text-align: center;
+}
+
+/*****************
+*
+* BGs
+*
+******************/
+$bg-map: (
+    'white': $white,
+    'black': $black,
+    'gray-50': $gray-50,
+    'gray-200': $gray-200,
+    'gray-500': $gray-500
+);
+
+@each $name,
+$value in $bg-map {
+    .bg-#{$name} {
+        background-color: $value;
+    }
+}
+
+.bg-blur {
+    backdrop-filter: blur(10px);
 }

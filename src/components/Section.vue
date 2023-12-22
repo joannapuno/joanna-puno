@@ -1,27 +1,28 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-const target = ref<HTMLElement | null>(null)
+const target = ref<Element | null>()
 const observer = new IntersectionObserver(([entry]) => {
   const content = target.value
-  if(entry.isIntersecting) {
-    content?.classList.add('show')
-  } else {
-    content?.classList.remove('show')
-  }
+  content?.classList.toggle('show', entry.isIntersecting)
 }, {
     root: null,
     threshold: [0.50]
 })
 
 onMounted(() => {
-    if(!target.value) return
-    observer.observe(target.value)
+  if(!target.value) return
+  observer.observe(target.value)
+})
+
+onUnmounted(() => {
+  if(!target.value) return
+  observer.unobserve(target.value)
 })
 </script>
 
 <template>
-  <div ref="target" class="section px-32 py-16">
+  <div ref="target" class="section px-64 py-16">
     <slot />
   </div>
 </template>
@@ -30,9 +31,10 @@ onMounted(() => {
 .section {
   height: 100vh;
   opacity: 0;
-  transform: translate(0, 10vh);
   transition: all 0.2s ease-in;
-
+  &:not(:first-child) {
+    transform: translate(0, 5rem);
+  }
   &.show {
     opacity: 1;
     transform: translate(0,0);

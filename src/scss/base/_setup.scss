@@ -63,15 +63,30 @@ div#app {
 }
 
 // Dotted BG
-// div#app {
-//     // Dimensions
-//     $dot-size: 2px;
-//     $dot-space: 23px;
-//     $dot-color: $peach;
+main {
+    // Dimensions
+    $dot-size: 2px;
+    $dot-space: 23px;
+    $dot-color: #4e4e4e;
 
-//     background:
-// 		linear-gradient(90deg, $white ($dot-space - $dot-size), transparent 1%) center,
-// 		linear-gradient($white ($dot-space - $dot-size), transparent 1%) center,
-// 		$dot-color;
-// 	background-size: $dot-space $dot-space;
-// }
+    background:
+        linear-gradient(90deg, $black (
+            $dot-space - $dot-size),
+        transparent 1%) center,
+        linear-gradient($black (
+            $dot-space - $dot-size),
+        transparent 1%) center,
+        $dot-color;
+    background-size: $dot-space $dot-space;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 95rem;
+    border: none;
+
+    @media screen and (min-width: 1119px) {
+        border-right: 1px solid $white;
+        border-left: 1px solid $white;
+    }
+}

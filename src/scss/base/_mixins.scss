@@ -6,10 +6,11 @@
 @mixin flex($direction: 'row', $justifyContent: '', $alignItems: '') {
     display: flex;
     flex-direction: #{$direction};
-    
+
     @if($justifyContent) {
         justify-content: #{$justifyContent};
     }
+
     @if($alignItems) {
         align-items: #{$alignItems};
     }

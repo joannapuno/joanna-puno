@@ -1,14 +1,35 @@
+:root {
+    --page-background-mode: #{$black};
+    --primary-color: #{$white};
+    --secondary-color: #{$gray-200};
+
+    --display-font-family: #{$display-text};
+    --body-font-family: #{$body-text};
+    --heading-font-size: 5rem;
+    --sub-heading-font-size: 2rem;
+    --body-font-size: 1.6rem;
+}
+
+html,
+body {
+    height: 100%;
+}
+
 html {
-    font-family: $font-family;
-    font-size: 1rem;
+    font-family: var(--body-font-family);
+    font-size: 62.95%;
     scrollbar-width: none;
 
     body {
+        background-color: var(--page-background-mode);
+        color: var(--primary-color);
+        font-size: var(--body-font-size);
+
         &::-webkit-scrollbar {
             display: none;
             -ms-overflow-style: none;
         }
-        
+
     }
 }
 
@@ -23,15 +44,6 @@ h2,
 h3,
 h4 {
     font-size: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.15rem;
 }
 
 button {
@@ -46,16 +58,35 @@ a {
     cursor: pointer;
 }
 
-// Dotted BG
 div#app {
+    height: 100%;
+}
+
+// Dotted BG
+main {
     // Dimensions
     $dot-size: 2px;
     $dot-space: 23px;
-    $dot-color: $peach;
+    $dot-color: #4e4e4e;
 
     background:
-		linear-gradient(90deg, $white ($dot-space - $dot-size), transparent 1%) center,
-		linear-gradient($white ($dot-space - $dot-size), transparent 1%) center,
-		$dot-color;
-	background-size: $dot-space $dot-space;
+        linear-gradient(90deg, $black (
+            $dot-space - $dot-size),
+        transparent 1%) center,
+        linear-gradient($black (
+            $dot-space - $dot-size),
+        transparent 1%) center,
+        $dot-color;
+    background-size: $dot-space $dot-space;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 95rem;
+    border: none;
+
+    @media screen and (min-width: 1119px) {
+        border-right: 1px solid $white;
+        border-left: 1px solid $white;
+    }
 }

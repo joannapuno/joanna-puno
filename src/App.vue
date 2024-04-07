@@ -20,7 +20,7 @@ const skills = ref<string[]>([
   <main>
     <div ref="wrapper" class="wrapper">
       <!-- Hero -->
-      <Section class="section-hero show">
+      <Section class="section-hero show justify-content-center pb-52">
         <div class="round-img fade-in-up">
           <img src="/assets/catoh.png" alt="Illustration of a cat">
         </div>
@@ -36,14 +36,14 @@ const skills = ref<string[]>([
       <Section class="section-about">
         <div class="d-flex flex-column flex-center mb-20">
           <h1 class="heading mb-20">about me</h1>
-          <p class="sub-heading text-center py-8">
-            Trained as a visual designer but fell in love with code &#128154;.
+          <p class="sub-heading text-center">
+            Trained as a visual designer but fell in love with code &#x1F90D;.
           </p>
           <p class="sub-heading text-center py-8">
             I enjoy going for long walks, filling out my sketchbook, and playing online games on my free time~
           </p>
         </div>
-        <div class="d-flex justify-content-center flex-wrap border-top gap-40 py-36">
+        <div class="d-flex justify-content-center flex-wrap border-top gap-12 py-36">
           <span v-for="skill in skills" class="sub-heading mb-8">{{ skill }}</span>
         </div>
 
@@ -51,7 +51,7 @@ const skills = ref<string[]>([
   
       <!-- Get in touch -->
       <Section class="section-contact">
-        <div class="round-img fade-in-up">
+        <div class="round-img fade-in-up justify-self-center align-self-center">
           <img src="/assets/catoh.png" alt="Illustration of a cat">
         </div>
         <div>
@@ -75,18 +75,11 @@ const skills = ref<string[]>([
 </template>
 
 <style lang="scss" scoped>
-.section-hero,
-.section-contact {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
 .round-img {
   height: 20rem;
   width: 20rem;
   border-radius: 100%;
   overflow: hidden;
-  justify-self: center;
-  align-self: center;
 
   img {
     object-fit: cover;

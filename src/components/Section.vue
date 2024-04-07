@@ -22,7 +22,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="target" class="section px-64 py-16">
+  <div ref="target" class="section d-flex flex-column gap-48 px-64 py-16">
     <slot />
   </div>
 </template>

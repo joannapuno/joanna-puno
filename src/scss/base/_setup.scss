@@ -82,11 +82,6 @@ main {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 95rem;
+    max-width: 72rem;
     border: none;
-
-    @media screen and (min-width: 1119px) {
-        border-right: 1px solid $white;
-        border-left: 1px solid $white;
-    }
 }
